@@ -1,0 +1,69 @@
+input[type="checkbox"] {
+    display: none;
+}
+.barddss{
+    display: none;
+}
+@media all and (max-width:1400px){}
+@media all and (max-width:1200px){
+    .right_part {
+        margin-left: 0;
+    }
+    .left_header {
+        display: none;
+    }
+    input[type="checkbox"]:checked ~ .left_header{
+        display: block;
+        width: 300px;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        top: 0;
+        z-index: 88;
+    }
+    input[type="checkbox"] {
+        position: fixed;
+        width: 3rem;
+        height: 3rem;
+        z-index: 999;
+        opacity: 0;
+        top: 4%;
+        left: 2%;
+        display: block;
+    }
+
+    .barddss {
+        position: fixed;
+        top: 4%;
+        left: 3%;
+        z-index: 99;
+        display: block;
+    }
+
+    .barddss::before {
+        content: "\f0c9";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 600;
+        color: rgb(4, 196, 255);
+        font-size: 2rem;
+    }
+    input[type="checkbox"]:checked + .barddss::before{
+        display: none;
+    }
+    .barddss::after {
+        content: "\f00d";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 600;
+        color: rgb(255, 87, 87);
+        font-size: 2rem;
+        display: none;
+    }
+    input[type="checkbox"]:checked + .barddss::after{
+        display: block;
+    }
+}
+@media all and (max-width:1040px){}
+@media all and (max-width:992px){}
+@media all and (max-width:768px){}
+@media all and (max-width:576px){}
+@media all and (max-width:400px){}
